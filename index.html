@@ -15,7 +15,7 @@
       dodger.style.backgroundColor = '#FF69B4';
       
       document.addEventListener('keydown', function(e){
-        alert(e.which);
+        //alert(e.which);
         if (e.which === 37){
           moveLeft();
           
@@ -35,6 +35,7 @@
       }
       function moveRight(){
         dodgerRCorner = dodger.style.right.replace('px','');
+        dodgerRCorner = parseInt(dodgerRCorner,10);
         if(dodgerRCorner > 0 ){
           dodger.style.right = `${dodgerRCorner - 1}px`
         }
