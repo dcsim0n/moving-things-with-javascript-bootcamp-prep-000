@@ -36,7 +36,7 @@
       function moveRight(){
         dodgerRCorner = dodger.style.right.replace('px','');
         dodgerRCorner = parseInt(dodgerRCorner,10);
-        if(dodgerRCorner > 0 ){
+        if(dodgerRCorner < 180 ){
           dodger.style.right = `${dodgerRCorner - 1}px`
         }
       }
