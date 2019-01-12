@@ -13,6 +13,20 @@
       var dodger = document.getEelementByID('dodger');
       dodger.style.backgroundColor = '#FF69B4';
       
+      function moveLeft(){
+        dodgerLCorner = dodger.style.left.replace('px', '');
+        dodgerLCorner = parseInt(dodgerLCorner, 10);
+        
+        if (dodgerLCorner > 0) {
+          dodger.sytle.left = '${dodgerLCorner - 1}px' 
+        }
+      }
+      function moveRight(){
+        dodgerRCorner = dodger.style.right.replace('px','');
+        if(dodgerRCorner > 0 ){
+          dodger.style.right = '${dodgerRCorner - 1}px'
+        }
+      }
       
       document.addEventListener('keydown', function(e){
         if (e.which === 37){
